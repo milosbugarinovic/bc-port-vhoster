@@ -6,7 +6,7 @@ var fs = require('fs'),
     dir;
 
 // Where might a locally-installed port-vhoster?
-dir = path.resolve(findup(process.cwd(), 'port-vhoster.js'), '../node_modules/port-vhoster');
+dir = path.resolve(findup(process.cwd(), 'port-vhoster.js') || '', '../node_modules/port-vhoster');
 
 // If port-vhoster is installed locally, use it. Otherwise use this port-vhoster.
 if (!existsSync(dir)) {
