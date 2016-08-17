@@ -21,7 +21,7 @@
     "http-proxy": "0.8.x"
   },
   "bin": {
-    "port-vhoster": "bin/bc-port-vhoster.js"
+    "bc-port-vhoster": "bin/bc-port-vhoster.js"
   },
   "main": "lib/bc-port-vhoster",
   "license" : "MIT",
