@@ -1,4 +1,4 @@
-port-vhoster
+bc-port-vhoster
 ==========
 
 A simple HTTP vhost reverse proxy / port sharing implementation for node.js. Run multiple node HTTP servers (Domains, IP's) through one port.
@@ -23,13 +23,13 @@ Make sure:
 
 ```
 
-    [sudo] npm install -g port-vhoster
+    [sudo] npm install -g bc-port-vhoster
 
 ```
 
 ## Configuring
 
-A valid configuration file for port-vhoster is written in JSON notation as a single object that should provide
+A valid configuration file for bc-port-vhoster is written in JSON notation as a single object that should provide
 three key/value pairs:
 
 - description (String) = Description, printed to the terminal on startup.
@@ -55,31 +55,31 @@ The following configuration is a simple routing example. You can add more vhosts
 
 ```
 
-Take a look at the [examples](https://github.com/kyr0/port-vhoster/tree/master/examples) directory for more inspiration.
+Take a look at the [examples](https://github.com/milosbugarinovic/bc-port-vhoster/tree/master/examples) directory for more inspiration.
 
 ## Running
 
-By default, ```port-vhoster``` searches for a config file called ```port-vhoster.json``` in current working directory.
-If you want to use a different name, run ```port-vhoster``` with the optional argument to name the config file:
+By default, ```bc-port-vhoster``` searches for a config file called ```port-vhoster.json``` in current working directory.
+If you want to use a different name, run ```bc-port-vhoster``` with the optional argument to name the config file:
 
 ```
 
-    [sudo] port-vhoster [$alternative-config-file.json]
+    [sudo] bc-port-vhoster [$alternative-config-file.json]
 
 ```
 
-You may need super-user permissions if you want ```port-vhoster``` to listen to a port below 1024 (e.g. port 80).
+You may need super-user permissions if you want ```bc-port-vhoster``` to listen to a port below 1024 (e.g. port 80).
 
 ## Logging and running in stand-alone mode
 
-If you're on a Unix/Linux/Mac OS X system you can run port-vhoster in server mode easily:
+If you're on a Unix/Linux/Mac OS X system you can run bc-port-vhoster in server mode easily:
 
 Starting (e.g. ```start-vhoster.sh``` - don't forget to: ```chmod +x start-vhoster.sh```!):
 
 ```
     #!/bin/sh
-    echo "Starting port-vhoster..."
-    nohup port-vhoster > port-vhoster.out 2> port-vhoster.err < /dev/null &
+    echo "Starting bc-port-vhoster..."
+    nohup bc-port-vhoster > bc-port-vhoster.out 2> bc-port-vhoster.err < /dev/null &
 
 ```
 
@@ -87,7 +87,7 @@ Stopping (e.g. ```stop-vhoster.sh``` - don't forget to: ```chmod +x stop-vhoster
 
 ```
     #!/bin/sh
-    echo "Stopping port-vhoster..."
+    echo "Stopping bc-port-vhoster..."
     kill $(ps aux | grep '[p]ort-vhoster' | awk '{print $2}')
 
 ```
