@@ -1,5 +1,5 @@
 {
-  "name": "port-vhoster",
+  "name": "bc-port-vhoster",
   "version": "0.1.16",
   "description": "A simple HTTP vhost reverse proxy / port sharing implementation for node.js. Run multiple node HTTP servers (Domains, IP's) through one port.",
   "author": "Aron Homberg <info@aron-homberg.de>",
@@ -21,9 +21,9 @@
     "http-proxy": "0.8.x"
   },
   "bin": {
-    "port-vhoster": "bin/port-vhoster.js"
+    "port-vhoster": "bin/bc-port-vhoster.js"
   },
-  "main": "lib/port-vhoster",
+  "main": "lib/bc-port-vhoster",
   "license" : "MIT",
   "engines": {
     "node": ">= 0.8.*"
